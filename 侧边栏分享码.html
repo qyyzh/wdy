@@ -1,0 +1,39 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		*{margin: 0; padding: 0;}
+		.box{width: 200px;height: 200px;background: url(../images/20190514190721.jpg) no-repeat; background-size: cover; position: fixed;right: -200px;top:300px; transition: right 1s;}
+		.ac{right: 0;}
+		.box span{background: yellow; position: absolute;right: 200px;top: 60px;width: 20px;word-wrap: break-word;border: 1px solid #333;}
+	</style>
+	<script src="../tools.js"></script>
+</head>
+<body>
+
+<div class="box">
+	<span>加个好友</span>
+</div>
+<script>
+	let box = tools.$(".box");
+		
+	box.onmouseenter = () => box.classList.add('ac');
+		
+	box.onmouseleave = () => box.classList.remove('ac');
+						
+	/* box.onmouseenter = function () {		
+		// tools.move2(box, 'left', 0);
+		this.classList.add('ac');		
+	}
+	box.onmouseleave = function () {		
+		// tools.move2(box, 'left', -200);
+		this.classList.remove("ac");
+	} */		
+</script>
+</body>
+</html>

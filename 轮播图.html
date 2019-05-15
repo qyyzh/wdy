@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			li{list-style: none;}
+			#box{height: 600px;width: 600px;margin: 50px auto; position: relative;}
+			#box ul li{position: absolute;z-index: 0;opacity: 0;transition: opacity 2s;}
+			#box ul li.ac{z-index: 5;opacity: 1;}
+			#box ol{position: absolute;left: 200px;top: 500px; z-index: 5;display: flex;align-items: center;justify-content: center;}
+			#box ol li.ac{z-index: 6;opacity: 1;}
+			#box ol li.ab{width: 80px;height: 80px;line-height: 40px;border-radius: 40px;}
+			#box ol li{width: 30px;border-radius: 15px; height: 30px;background: #fff;margin-left: 5px;float: left;line-height: 20px;text-align: center;
+			       z-index: 5; opacity: .5; cursor: pointer;}
+			img{height: 600px;width: 600px;}
+			#box>a{text-decoration: none; position: absolute;top: 50%;z-index:6;font-size: 50px;vertical-align: middle;
+					text-align: center;height: 50px; line-height: 40px;	color: #fff;background: rgba(0,0,0,0.5); }
+			#next{right: 0px;}
+			#Prev{left: 0px;}
+		</style>		
+	</head>
+	<body>
+		<div id="box">
+			<ul>
+				<li class="ac"><a href="javascript:;"><img src="../images/1.jpg" ></a></li>
+				<li><a href="javascript:;"><img src="../images/2.jpg" ></a></li>
+				<li><a href="javascript:;"><img src="../images/3.jpg" ></a></li>
+				<li><a href="javascript:;"><img src="../images/4.jpg" ></a></li>
+				<li><a href="javascript:;"><img src="../images/5.jpg" ></a></li>
+			</ul>
+			<ol>
+				
+			</ol>
+			<a id="next" href="javascript:;">&raquo;</a>
+			<a id="Prev" href="javascript:;">&laquo;</a>
+		</div>
+		<script src="tools.js"></script>
+		<script src="move.js"></script>
+		<script type="text/javascript">
+			
+			var json = [
+			    {   //  1			       
+			        "opacity":100,
+			        "zIndex":6
+			    },
+			    {  // 2			        
+			        "opacity":50,
+			        "zIndex":5
+			    },
+			    {   // 3
+			        "opacity":50,
+			        "zIndex":5
+			    },
+			    {  // 4
+
+			        "opacity":50,
+			        "zIndex":5
+			    },
+			    {   //5
+			        "opacity":50,
+			        "zIndex":5
+			    }
+			];
+			
+			var box = document.querySelector("#box"),
+				lis = box.querySelector("ul").children,
+				ol = box.querySelector("ol"),
+				btns = [],
+				next = document.querySelector("#next"),
+				Prev = document.querySelector("#Prev");				
+			var index = 0;
+			var lastindex = 0;
+			var timer = null;
+			// 创建按钮
+			for(var i=0; i<lis.length; i++){
+				var li = document.createElement("li");			
+				/* li.innerHTML = i+1; */
+				var I = i+1;
+				li.style.background = "url(../images/"+I+".jpg)";
+				li.style.backgroundSize = "cover";
+				
+				if(i===0){
+					 li.className = "ac";
+					 li.classList.add("ab");
+				}
+				ol.appendChild(li);
+				btns.push(li);
+			}
+			// 按钮点击
+			for(let i=0; i<btns.length; i++){
+				btns[i].onclick = function(){
+				index = i;				
+				change();
+				big();
+				lastindex = index;
+				}
+			}
+			// 负责变大的函数
+			function big(){
+				btns[lastindex].classList.remove("ab");
+				btns[index].classList.add("ab");
+			}
+			// 负责切换的函数
+			function change(){
+				btns[lastindex].classList.remove("ac");
+				lis[lastindex].classList.remove("ac");
+				
+				btns[index].classList.add("ac");
+				lis[index].classList.add("ac");
+			}
+			// 向后切换
+			next.onclick = function(){
+				if(++index === lis.length) {
+					index = 0;
+				}				
+				change();
+				big();
+				lastindex = index;
+			}
+			// 向前切换
+			Prev.onclick = function(){
+				if(--index<0){
+					index = lis.length-1;
+				}				
+				change();
+				big();
+				lastindex = index;
+			}
+			// 自动切换
+			/* function play(){
+				timer = setInterval(
+					function(){
+						next.onclick();
+					},2500
+				)
+			}
+			play();			
+			box.onmouseenter = function(){
+				clearInterval(timer);
+			}
+			box.onmouseleave = function(){
+				play();
+			} */
+			box.onmouseleave = (
+			function play(){
+			 timer = setInterval(next.onclick,2500);
+			 return play;
+			}
+			)();
+			// 停止自动切换
+			box.onmouseenter = function(){
+				clearInterval(timer);
+			}		
+			/* function showData(){
+				for( var i = 0 ; i < btns.length ; i++ ){
+			  btns[i].style.zIndex = json[i].zIndex;
+					move( btns[i] ,json[i] ,function(){
+						//运动结束后  改变开关变量的值   使按钮点击生效
+						f = true;
+					});
+				}
+			}
+			
+			var f = true;
+			function shang(){
+				if( f ){ //函数截流
+					json.push( json.shift() );
+					showData();
+					f = false;
+				}
+			}
+			function xia(){
+				json.unshift( json.pop() );
+				showData();
+			} */			
+		</script>
+		
+	</body>
+</html>

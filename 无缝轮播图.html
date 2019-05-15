@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			li{list-style: none;}
+			#box{height: 600px;width: 600px;margin: 50px auto; position: relative;overflow: hidden;}
+			#ul{height: 600px;width: 3000px;position: absolute;left: 0;transition: left 1s; }
+			#ul li{float: left;height: 600px;width: 600px;}
+			#ul1{height: 600px;width: 3000px;position: absolute;left:3000px;transition: left 1s; }
+			#ul1 li{float: left;height: 600px;width: 600px;}
+			#box ol{position: absolute;left: 200px;top: 500px; z-index: 5;display: flex;align-items: center;justify-content: center;}
+			#box ol li.ac{width: 80px;height: 80px;line-height: 40px;border-radius: 40px;opacity: 1;}			
+			#box ol li{width: 30px;border-radius: 15px; height: 30px;background: #fff;margin-left: 5px;float: left;line-height: 20px;text-align: center;
+			       z-index: 5; opacity: .5; cursor: pointer;}
+			img{height: 600px;width: 600px;}
+	</style>		
+	</head>
+	<body>
+		<div id="box">
+			<ul id="ul">
+				<li class="ac"><a href="javascript:;"><img src="../images/1.jpg" ></a></li>
+				<li><a href="javascript:;"><img src="../images/2.jpg" ></a></li>
+				<li><a href="javascript:;"><img src="../images/3.jpg" ></a></li>
+				<li><a href="javascript:;"><img src="../images/4.jpg" ></a></li>
+				<li><a href="javascript:;"><img src="../images/5.jpg" ></a></li>
+			</ul>
+			<ul id="ul1">
+				<li class="ac"><a href="javascript:;"><img src="../images/1.jpg" ></a></li>
+				<li><a href="javascript:;"><img src="../images/2.jpg" ></a></li>
+				<li><a href="javascript:;"><img src="../images/3.jpg" ></a></li>
+				<li><a href="javascript:;"><img src="../images/4.jpg" ></a></li>
+				<li><a href="javascript:;"><img src="../images/5.jpg" ></a></li>
+			</ul>
+			<ol>
+				
+			</ol>		
+		</div>
+		<script src="../tools.js"></script>
+		<script type="text/javascript">	
+			var index = 0;
+			window.onload = function(){	
+			var box = document.querySelector("#box"),
+				ul = box.querySelector("#ul"),
+				ul1 = box.querySelector("#ul1"),
+				lis = box.querySelector("ul").children,
+				ol = box.querySelector("ol"),
+				btns = [];						
+			var lastindex = 0;
+			// 创建按钮			
+			for(var i=0; i<lis.length; i++){
+				var li = document.createElement("li");			
+				/* li.innerHTML = i+1; */
+				var I = i+1;
+				li.style.background = "url(../images/"+I+".jpg)";
+				li.style.backgroundSize = "cover";				
+				if(i===0){
+					 li.classList.add("ac");					
+				}
+				ol.appendChild(li);
+				btns.push(li);
+				
+			}
+			
+			// 按钮点击
+			for(let i=0; i<btns.length; i++){
+				btns[i].onclick = function(){
+				/* tools.move2(ul, 'left', -i*600); */											
+				index = i;				
+				change();				
+				lastindex = index;
+				}
+			}
+			/* function fun(x){
+				
+			} */
+			// 负责切换的函数
+			function change(){				
+				/* btns[lastindex].classList.remove("ac");							
+				btns[index].classList.add("ac"); */
+				ul.style.left = -index*600 + 'px';
+				ul1.style.left = (-index*600 +3000) + 'px';							
+				if((-index*600 +3000) == 0){
+				    index = 0;
+				}				
+			}
+			timer = setInterval(function(){								
+				change();				
+			},2000);
+					
+/* 			box.onmouseleave = (
+			function play(){
+			 timer = setInterval(next.onclick,2500);
+			 return play;
+			}
+			)();
+			// 停止自动切换
+			box.onmouseenter = function(){
+				clearInterval(timer);
+			}	 */	
+		}				
+		</script>
+		
+	</body>
+</html>

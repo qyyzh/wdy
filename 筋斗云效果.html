@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul {list-style:none;}
+        body {
+            background-color: skyblue;
+        }
+        .nav {
+            width: 800px;
+            height: 42px;
+            background:url(../images/rss.png) no-repeat right center #fff;
+            margin: 100px auto;
+            border-radius: 5px;
+            position: relative; 
+        }
+        .cloud {
+            width: 88px;
+            height: 42px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url(../images/j.jpg) no-repeat;
+			background-size: cover;
+        }
+		.nav ul li.ac{
+			transition: 1s;
+			color: yellow;
+		}
+        .nav ul {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .nav li {
+            float: left;
+            width: 88px;
+            height: 42px;
+            line-height: 42px;
+            text-align: center;
+            color: #000;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="nav" id="nav">
+    <span class="cloud" id="cloud"></span>
+    <ul id="ul">
+        <li class="ac">首页新闻</li>
+        <li>千锋师资</li>
+        <li>千锋活动</li>
+        <li>企业文化</li>
+        <li>招聘信息</li>
+        <li>公司简介</li>
+        <li>上海校区</li>
+        <li>广州校区</li>
+    </ul>
+</div>
+</body>
+</html>
+<script src="../tools.js"></script>
+<script>
+	var aLi = document.querySelector("#ul").children;
+	var cloud = document.querySelector("#cloud");
+	var index = 0; // 记录当前下标
+	
+	for(let i = 0; i < aLi.length; i++){
+		// 鼠标进入
+		aLi[i].onmouseenter = function () {
+			
+			for(j=0; j<aLi.length; j++){
+				aLi[j].classList.remove("ac");
+			// 先清除所有ac样式	
+			}					
+			tools.move2(cloud, 'left', this.offsetLeft);
+			// 给aLi[i]添加ac样式
+			aLi[i].classList.add("ac");
+			// cloud.style.left = this.offsetLeft + "px";
+		}
+		// 鼠标点击		
+		aLi[i].onclick = function () {
+			// 记录下标
+			index = i;			
+		}
+		// 鼠标离开		
+		aLi[i].onmouseleave = function () {
+			tools.move2(cloud, 'left', aLi[index].offsetLeft);			
+			if(index === i){
+				aLi[i].classList.add("ac");
+			}else{
+				aLi[i].classList.remove("ac");
+				aLi[index].classList.add("ac");				
+			}			
+			// 回到第index的li上						
+		}			
+	}
+	
+</script>
