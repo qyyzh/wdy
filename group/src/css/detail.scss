@@ -1,0 +1,94 @@
+@import 'model/reset.scss';
+// 网页头部
+@import 'model/header.scss';
+// 下拉菜单
+@import 'model/sel.scss';
+
+#index-html{
+    height: 1000px;
+    width: 100%;
+    background: red;
+    #w1200{
+        height: 60px;
+        width: 100%;
+        background: #fff;
+    }
+    .sub-nav{
+        background: #fff;
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        top: 66px;
+        opacity: 0.85;    
+        .w1200{
+            width: 1200px;
+            margin: 0 auto;
+            height: 100%;
+            .fl{
+                display: inline-block;
+                margin-top: 21px;
+                height: 20px;
+                line-height: 20px;
+                font-size: 18px;
+                color: #e83100;
+                font-family: "Microsoft Yahei","微软雅黑",Arial,Helvetica,sans-serif;
+            }
+            .f2{
+                display: inline-block;
+                margin-top: 21px;
+                height: 20px;
+                margin-left: 18px;
+                line-height: 20px;
+                font-size: 18px;
+                padding-left: 25px;
+                color: #000;
+                border-left: 1px solid #ccc;
+                font-family: "Microsoft Yahei","微软雅黑",Arial,Helvetica,sans-serif;
+            }
+            .btn-buy{
+                display: block;
+                color: #fff;
+                font-weight: 500;
+                background: #e45631;
+                float: right;
+                width: 85px;
+                height: 25px;
+                line-height: 25px;
+                border-radius: 2px;
+                text-align: center;
+                margin-top: 17px;
+                margin-left: 20px;
+                font-size: 12px;
+                }
+            .sub-menu{
+                float: right;
+                margin-top: 10px !important;
+                li{
+                    
+                    height: 43px;
+                    float: left;
+                    margin-left: 15px;
+                    display: flex;
+                    font-size: 12px;
+                    padding-bottom: 5px !important;                
+                    a{    
+                        padding: 10px;
+                        color: #000;
+                    }
+                }
+                .active{
+                    border-bottom: 2px solid #e8380d;
+                    a{
+                        color: #e8380d;
+                    }
+                }
+            }
+            }
+
+        }
+    }
+
+
+
+// 页面尾部
+@import 'model/footer.scss';

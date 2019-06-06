@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>nby商城--首页</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<!-- 用来加载头部的容器 -->
+<header id="header"></header>
+<!-- 用来加载下拉菜单的容器 -->
+<sel id="sel"></sel>
+<!-- 用来加载主体内容的容器 -->
+<div id="index-html">
+    <div id="Carousel">
+    </div>
+    <script type="text/html" id="Carousel-ul-li">
+      <ul id="Carousel-ul">
+        {{each Carousel img}}
+        <li><a href="https://www.nubia.com/cn/" style="background-image: url('{{img.images}}')"></a></li>
+        <!-- <li><a href="/html/detail.html?id={{img.id}}" style="background-image: url('{{img.images}}')"></a></li> -->
+        {{/each}}
+      </ul>
+      <ol id="Carousel-ol"></ol>
+      <span class="glyphicon glyphicon-menu-left" id="a-left" href="javascript:;"></span>
+      <span class="glyphicon glyphicon-menu-right" id="a-right" href="javascript:;"></span>
+    </script>
+    <div id="Featured">
+    </div>
+    <script type="text/html" id="Featured-ul-li">
+      <ul id="Featured-ul">
+          {{each Featured img}}
+          <li><a href="https://www.nubia.com/cn/" style="background-image: url('{{img.images}}')"></a></li>
+          <!-- <li><a href="/html/detail.html?id={{img.id}}" style="background-image: url('{{img.images}}')"></a></li> -->
+          {{/each}}
+        </ul>
+    </script>
+</div>
+<!-- 用来加载尾部的容器 -->
+<footer id="footer"></footer>
+  <script src="libs/require/require.min.js" data-main="js/index"></script>
+</body>
+</html>

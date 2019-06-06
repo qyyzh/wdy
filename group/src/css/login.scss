@@ -1,0 +1,120 @@
+@import 'model/reset.scss';
+body{
+    background: #f5f5f5;
+    .login{
+        width: 850px;
+        height: 475px;
+        margin: 60px auto;
+        background: #fff;
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        #login-form{
+            height: 278px;
+            width: 370px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            #DengLu{
+                font-weight: inherit;
+                font-size: 18px;
+                margin: 20px 0;
+            }
+            #ac-DengLu{
+                display: flex;
+                flex-direction: column;
+                width: 360px;
+                height: 120px;
+                display: block;
+                input{
+                    width: 348px;
+                    height:46px;
+                    font-size: 12px;
+                    padding-left: 10px;
+                    border: 1px solid #e0e4e7;
+                }
+                #inp1{
+                    margin-bottom: 20px;
+                }
+            }
+
+            #vc-DengLu{
+                width: 360px;
+                height: 120px;
+                display: none;
+                input{
+                    width: 348px;
+                    height: 46px;
+                    font-size: 12px;
+                    padding-left: 10px;
+                    border: 1px solid #e0e4e7;
+                }
+                #inp{
+                    display: flex;
+                    width: 360px;
+                    height: 50px;
+                    margin-top: 20px;
+                    justify-content: center;
+                    #inp2{                                            
+                        width: 260px;
+                        height: 46px;
+                        flex: 1;
+                    }
+                    #inp3{                  
+                        width: 100px;
+                        height: 50px;
+                        background: #fff;
+                    }
+                }                
+                
+            }
+            #login_btn_id{
+                width: 360px;
+                height: 50px;
+                line-height: 50px;
+                display: block;
+                margin-bottom: 20px;
+                font-size: 20px;
+                background: #e8380d;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                font-family: tahoma, arial, simsun, sans-serif;
+            }
+            .register-now{
+                width: 360px;
+                text-align: right;
+                font-size: 14px;
+            }
+        }
+        .third-login{
+            margin-top: 20px;
+            width: 370px;
+            height: 30px;
+            font-size: 14px;
+            color: #666;
+            .login-rem{
+                font-family: "Microsoft Yahei","微软雅黑",Arial,Helvetica,sans-serif;
+                font-size: 14px;
+                color: #666;
+                width: 172px;
+                height: 28px;
+                a{
+                    width: 28px;
+                    height: 28px;
+                    color: #fff;
+                    border-radius: 14px;
+                    text-align: center;
+                    line-height: 28px;
+                    margin-left: 12px;
+                    font-size: 14px;
+                    display: block;
+                    float: right;
+                    background: #666;
+                }
+            }
+        }
+        
+    }
+}
