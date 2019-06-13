@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nby商城详情</title>
+    
+    <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+<body>
+<!-- 用来加载头部的容器 -->
+<header id="header"></header>
+<!-- 用来加载下拉菜单的容器 -->
+<sel id="sel"></sel>
+<!-- 用来加载侧边栏的容器 -->
+<div id="sidebar"></div>
+<!-- 用来加载主体内容的容器 -->
+<div id="index-html">
+    <div class="nav">
+        <a href="/index">首页 &nbsp;/&nbsp;
+        </a>
+        <a href="/detail">手机 &nbsp;/&nbsp;
+        </a>
+        <a href="/product">红魔3</a>
+    </div>
+    <div class="main_content">
+<!-- 用来加载主体内容左边放大镜 --> 
+        <div class="main_left" id="zoom-left">
+            <div class="product-img-big">
+                <img class="zoom-img" src="../images/1.jpg" data-zoom-image="../images/1.jpg" alt="">
+            </div>
+            <div class="product-img-min">
+                <div class="back"><a href="javascript:;"></a></div>
+                <div class="nav-img" id="product-img">
+                    <ul id='img_thumb'>
+                        <li class="selected">
+                            <a href="javascript:;" data-image="../images/1.jpg" data-zoom-image="../images/1.jpg">
+                                <img class="s" src="../images/1.jpg" alt=""> 
+                            </a>
+                        </li>
+                        <li>
+                                <a href="javascript:;" data-image="../images/2.jpg" data-zoom-image="../images/2.jpg">
+                                    <img class="s" src="../images/2.jpg" alt=""> 
+                                </a>
+                        </li>
+                        <li>
+                                <a href="javascript:;" data-image="../images/3.jpg" data-zoom-image="../images/3.jpg">
+                                    <img class="s" src="../images/3.jpg" alt=""> 
+                                </a>
+                        </li>
+                        <li>
+                                <a href="javascript:;" data-image="../images/4.jpg" data-zoom-image="../images/4.jpg">
+                                    <img class="s" src="../images/4.jpg" alt=""> 
+                                </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="forward"><a href="javascript:;"></a></div>
+            </div>
+            <div id="share">
+                <span class="glyphicon glyphicon-repeat">分享</span>
+                <span class="glyphicon glyphicon-star-empty">收藏</span>
+            </div>
+        </div>
+<!-- 用来加载主体内容右边详情 --> 
+        <div class="main_right">
+            <p class="main_right_p">
+                <span>红魔3 玄铁黑 8GB+128GB </span>
+            </p>
+            <p class="sellPoint">
+                <span style="color: rgb(255, 77, 77); font-size: 16px; font-weight: 800;">【仅限6.11日领券+下单立减】6+128G到手价：2699、8+128G到手价：2899、12+256G到手价：3699</span><br>
+            </p>
+            <div class="productActivity">
+                <div class="price"><p class="rightLabel">价　格</p> 
+                    <div class="PriceContent">
+                        <span style="font-size: 32px; color: rgb(255, 94, 94); line-height: 28px;">
+                            <i class="priceIcon">¥</i>3499.00
+                        </span>
+                    </div>
+                </div> 
+
+                <div id="coupon-bananer" class="coupon actionList">
+                    <div class="rightLabel">
+                        <span>优惠券</span>
+                    </div> 
+                    <div class="coupon-r">
+                        <div class="couponList">
+                            <span class="receivecoupon" uniquecode="ca08c5eeeb16744" couponid="509">
+                                <em class=" icon-l"></em>300元红魔3手机RNG.M助威券<em class="icon-r"></em>
+                            </span>
+                        </div>
+                        <p id="open_coupon" class="open-coupon">立即领取&gt;</p>
+                    </div>
+                </div> 
+
+                <div class="promo-sell">
+                    <div class="rightLabel">活　动</div> 
+                    <div class="promo-info">
+                        <p>
+                            <i class="wrap-txt">赠品</i> <span>送红魔3电竞向量保护套</span>
+                        </p> 
+                        <p class="spec" hb1="true">
+                            <i class="wrap-txt">分期</i> <span>享受花呗6期,免息分期</span>
+                        </p>
+                        <p>
+                            <i class="wrap-txt">积分</i><span>购买即赠积分，积分可抵现</span>
+                        </p>
+                        <p>
+                            <i class="wrap-txt">包邮</i> <span>青铜及以下满59、白银满39、黄金及以上包邮</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="addressMain">
+                <p class="rightLabel">地　址</p> 
+                <div class="address">
+                    <p><img src="https://oss.static.nubia.cn/upload/5ae00f8b59e2087.png">
+                        <span class="address_content" regionid="2518">四川省 成都市 锦江区</span>
+                    </p>
+                    <span class="dh">
+                        <span class="expressprefix">现货</span>
+                        <span class="expresstime">11:00前下单，预计6月12日12:00点前送达</span>
+                    </span>
+                </div>
+                <span class="change">修改</span>
+            </div>
+
+            <div class="productOptions">
+                <div class="phone_net">
+                    <p class="rightLabel2">选择颜色</p>
+                    <ul id="selectColor" class="clearfix_jj net">
+                        <li class="cur">玄铁黑</li>
+                        <li class="">赤焰红</li>
+                        <li class="">战地迷彩版</li>
+                        <li class="">红蓝竞技版</li>
+                    </ul>
+                </div>
+                <div class="phone_net">
+                    <p class="rightLabel2">选择版本</p>
+                    <ul id="selectSpec" class="clearfix_jj net">
+                        <li class="noShock">12GB+256GB</li>
+                        <li class="">6GB+128GB</li>
+                        <li class="">6GB+64GB</li>
+                        <li class="cur">8GB+128GB</li>
+                    </ul>
+                </div>
+                <div id="packageSelect" class="phone_net">
+                    <p class="rightLabel2">选择套餐</p>
+                    <ul id="selectPackage" ext="true" ext1="true" class="net selectPackage">
+                        <li groupfav="0" groupstock="0" pkgcateid="0" class="cur">
+                            <span>仅手机</span>
+                            <p style="display: block;">¥3499.00<span class="redcolor" style="display: none;">，省¥NaN </span></p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="packageItem" class="pjtc" style="display: none;"></div>
+
+                <div id="selectBao" class="phone_net">
+                    <p class="rightLabel2">意外保<a href="/warranty.php?a=warrantyDoc"><img alt="" src="//shop-soa-static.nubia.com/images/buy_mobile/hint.png?v=1559440718"></a></p>
+                    <ul class="clearfix_jj net">
+                        <li ysid="1182"><span>红魔3（8G+128G）屏碎宝（1年内保修1次）</span> <p>¥159.00</p></li>
+                        <li ysid="1181"><span>红魔3（8G+128G）屏碎宝（半年内保修1次）</span> <p>¥109.00</p></li>
+                    </ul>
+                </div>
+                
+                <div class="count" style="overflow: hidden;">
+                    <p class="rightLabel">数　量</p>
+                    <div class="num">
+                        <div class="minus">
+                            <img src="//shop-soa-static.nubia.com/images/buy_mobile/minus.png?v=1559440718">
+                        </div>
+                        <div class="totle">1</div>
+                        <div class="add">
+                            <img src="//shop-soa-static.nubia.com/images/buy_mobile/add.png?v=1559440718">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btnGroup">
+                <div class="buy-btn-main">
+                    <a class="addShopCar" href="http://localhost:1234/html/shop.html">加入购物车</a>
+                    <form id="bottom-buy-btn" method="POST" action="/order/check" class="buy-now" stock="1">
+                        <input type="hidden" name="buy_from" value="1">
+                        <input id="params" type="hidden" name="item_param">
+                        <a class="button active_button">立即购买</a>
+                    </form>
+                </div>
+            </div>            
+        </div>
+    </div>
+</div>
+<!-- 用来加载尾部的容器 -->
+<footer id="footer"></footer>
+<script src="/libs/require/require.min.js" data-main="/js/product"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录注册</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+<div class="login">
+    <img style="height:55px; width: 156px;" src="/images/tiMg.gif">
+    <form id="login-form">
+        <div id="DengLu">
+            <a id="zh" href="javascript:;"  style="color:#e8380d">努比亚账号登录</a>
+            <span style="font-size: 18px;padding: 0 7px;color: #282828;">|</span>
+            <a id="sj" href="javascript:;" style="color:#34383d">手机验证登录</a>
+        </div>
+        <div id="ac-DengLu">
+            <input id="inp1" type="text" id="username" name="username" placeholder="邮箱/手机号码/用户名" datatype="*" errormsg="手机号码格式错误" nullmsg="请填写信息！">
+            <input type="password" id="password" name="password" placeholder="密码为6-16个字符（数字、字母、符号至少包含两种）" datatype="s6-16" errormsg="密码为6-16个（数字、字母、符号至少包含两种）">
+        </div>
+        <div id="vc-DengLu">
+            <input type="text" id="mobile" name="mobile" placeholder="手机号码" datatype="m" errormsg="手机号码格式错误" ajaxurl="/login/checkmobile.action">
+            <label id="inp">
+            <input id="inp2" type="text" id="mobileValidateCode" name="mobileValidateCode" placeholder="请输入手机验证码" datatype="*">
+            <input id="inp3" type="button" value="获取验证码" class="btn-code" id="btn-code-mobile">
+            </label>   
+        </div>
+        <input type="button" style="margin-top:10px" id="login_btn_id" value="立即登录" class="btn-login">
+        <div class="register-now">
+                <a href="javascript:;" style="color:#e8380d">注册新账号</a>
+                <span style="font-size: 18px;padding: 0 7px;color: #d5d5d5;">|</span>
+                <a style="color:#34383d" href="javascript:;">忘记密码?</a>
+        </div>
+    </form>
+    <div class="third-login">
+        <span style="float:left;line-height:30px;">其他方式登录：</span>
+        <label class="login-rem" style="float:left">
+        <a href="/login/qqshow.action?back_url=https%3A%2F%2Fwww.nubia.com%2Fcn%2F" class="qq">QQ</a>
+        <a href="/login/sinashow.action?back_url=https%3A%2F%2Fwww.nubia.com%2Fcn%2F" class="weibo">微博</a>
+        <a href="/login/zfbshow.action?back_url=https%3A%2F%2Fwww.nubia.com%2Fcn%2F" class="alipay">新浪</a>
+        <a href="/login/wxshow.action?back_url=https%3A%2F%2Fwww.nubia.com%2Fcn%2F" class="wx">微信</a>
+        </label>
+    </div>
+</div>
+
+
+</body>
+<script src="/libs/require/require.min.js" data-main="/js/login"></script>  
+</html>

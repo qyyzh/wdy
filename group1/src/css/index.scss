@@ -1,0 +1,97 @@
+@import 'model/reset.scss';
+// 网页头部
+@import 'model/header.scss';
+// 下拉菜单
+@import 'model/sel.scss';
+// 侧边栏
+@import 'model/sidebar.scss';
+
+// 主页面内容
+#index-html{
+    //轮播图
+    position: relative;
+  #Carousel{
+    height: 560PX;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+    #Carousel-ul{
+      height: 100%;
+      position: absolute;
+      li{
+        
+        float: left;
+        height: 100%;
+        width: 1263px;       
+        a{
+        display: inline-block;
+        height: 100%;
+        width: 100%;     
+        }
+      }
+    }
+    #Carousel-ol{
+      position:absolute;bottom: 10px;
+      li{
+        width: 40px;height: 2px;
+        background: #414143;margin-left: 5px;
+        float: left;line-height: 20px;
+        text-align: center;cursor: pointer;
+      }
+      li.ac{background: red;}
+    }
+    
+    span{
+      position: absolute;
+      border-radius: 24px;
+      background-color: rgba(191, 191, 191, 0.20);
+      color:rgba($color: #282828, $alpha: 0.3);
+      text-align: center;
+      height: 88px;
+      width: 48px;
+      font-size: 48px;
+      line-height: 88px;
+      display: none;
+    }
+    #a-left{
+      left: 5%;
+      top: 40%;
+    }
+    #a-right{
+      right: 5%;
+      top: 40%;
+    }
+
+  }
+  //主打产品
+  #Featured{
+    height: 300px;
+    width: 100%;
+    background:#efeeeb;
+    #Featured-ul{
+      width: 100%;
+      height: 300px;
+      display: flex;
+      padding: 10px 5px;
+      justify-content: space-between;
+      li{
+        height: 100%;
+        width: 415px;
+        a{
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+        }      
+      }
+    }
+  }
+}
+
+
+
+
+
+
+// 页面尾部
+@import 'model/footer.scss';

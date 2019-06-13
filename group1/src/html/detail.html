@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nby商城详情</title>
+    <link rel="stylesheet" href="/css/detail.css">
+    <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<!-- 用来加载头部的容器 -->
+<header id="header"></header>
+<!-- 用来加载下拉菜单的容器 -->
+<sel id="sel"></sel>
+<!-- 用来加载侧边栏的容器 -->
+<div id="sidebar"></div>
+<!-- 用来加载主体内容的容器 -->
+<div id="index-html">
+    <div id="w1200"></div>
+    <div class="sub-nav" style="height: 60px; overflow: hidden; top: 66px;" id="subNav">   
+        <div id="w12" class="w1200">
+        </div>
+        <script type="text/html" id="w120">
+            {{each tit word}}
+            <a class="fl" href="http://localhost:1234/html/detail.html" class="sub-logo-z9max1 fl active">{{word.tit1}}</a>
+            <a class="f2" href="http://localhost:1234/html/detail.html" class="sub-logo-z9max1 fl a_title">{{word.tit2}}</a>
+            {{/each}}             
+            <a target="_blank" href="https://www.nubia.com/active/8934837741ec16c.html" class="btn-buy">附近的店&gt;&gt;</a>
+            <a target="_blank" href="http://localhost:1234/html/product.html" class="btn-buy">立即购买</a>
+            <ul class="sub-menu" id="sub-menu">
+                <li class="active"><a class="type=summary" href="?type=summary">概述</a></li>
+                <li><a class="type=params" href="?type=params">技术规格</a></li>
+                <li><a class="type=gallery" href="?type=gallery">产品展示</a></li>
+                <li><a href="http://localhost:1234/html/login.html">NB码通道</a></li>
+                <li><a class="zx" href="javascript:;">在线咨询</a></li>
+            </ul>
+        </script>
+    </div>
+
+    <div id="summarize">
+        
+    </div>
+    <script type="text/html" id="sum-img">
+        <ul id="sum-ul">
+            {{each sum img}}
+            <li><img src="{{img.images}}" alt="{{img.title}}"></li>
+            {{/each}}   
+        </ul>
+    </script>
+</div>
+<!-- 用来加载尾部的容器 -->
+<footer id="footer"></footer>
+<script src="/libs/require/require.min.js" data-main="/js/detail"></script>
+</body>
+</html>

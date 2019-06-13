@@ -1,0 +1,447 @@
+@import 'model/reset.scss';
+// 网页头部
+@import 'model/header.scss';
+// 下拉菜单
+@import 'model/sel.scss';
+// 侧边栏
+@import 'model/sidebar.scss';
+#index-html{
+    width: 100%;
+    position: relative;
+    min-height: 660px;
+    overflow: hidden;
+    .nav{
+        width: 1170px;
+        height: 18px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        margin-top: 12px;
+        font-size: 12px;
+        
+        a{
+            color: #999;
+        }
+        
+    }
+    .main_content{
+        width: 1170px;
+        min-height: 750px;
+        margin: 0 auto;
+        .main_left{
+            position: relative;
+            float: left;
+            margin-top: 100px;
+            width: 50%;
+            height: 730px;
+            text-align: center;
+            right: 50px;
+            .zoom-img{
+                height: 344px;
+                width: 344px;
+                // padding: 70px 70px;
+                
+            }
+            #img_thumb{
+                width: 585px;                    
+                position: relative;
+                .selected{
+                    border: 1px solid #eb4f2c;
+                }
+                li{ 
+                    display: inline-block;
+                    margin-left: 10px;
+                    
+                    .s{
+                        width: 86px;
+                        height: 86px;  
+                    }
+                }
+            }
+            #share{
+                text-align: left;
+                padding-left: 110px;
+                margin-top: 20px;
+                span{
+                    color: #eb4f2c;
+                    margin-right: 30px;
+                    font-size: 14px;
+                    cursor: pointer;
+                    position: relative;
+                }
+            }
+        }
+        .main_right{
+            float: right;
+            margin-bottom: 20px;
+            width: 50%;
+            .main_right_p{
+                line-height: 40px;
+                span{
+                    font-size: 24px;
+                    color: rgb(0, 0, 0);
+                }
+            }
+            .sellPoint{
+                color: #e8380d;
+                font-size: 16px;
+                margin-bottom: 20px;
+                line-height: 26px;
+                span{
+                    color: rgb(255, 77, 77);
+                    font-size: 16px;
+                    font-weight: 800;
+                }                       
+            }
+            .productActivity{
+                background: rgb(248,248,248);
+                display: inline-block;
+                width: 100%;
+                padding: 30px 20px 20px 20px;
+                .price{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 5px 0px;
+                    p{
+                        width: 15%;
+                        color: rgb(100,100,100);
+                        font-size: 14px;
+                        letter-spacing: 7px;
+                        line-height: 20px;
+                    }
+                    .PriceContent{
+                        width: 85%;
+                        display: inline-block;
+                        span{
+                            font-size: 32px;
+                            color: rgb(255, 94, 94);
+                            line-height: 28px;
+                            i{
+                                font-size: 18px;
+                                margin-top: 4px;
+                                color: rgb(255,94,94);
+                                font-style: normal;
+                            }
+                        }
+                    }
+                    
+                }
+                .coupon{
+                    position: relative;
+                    font-size: 13px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 1rem 0px;
+                    .rightLabel{
+                        width: 15%;
+                        color: rgb(100,100,100);
+                        font-size: 14px;
+                        letter-spacing: 7px;
+                        line-height: 20px;
+                    }
+                    .coupon-r{
+                        width: 85%;
+                        overflow: auto;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        .couponList{
+                            max-width: 50%;
+                            display: -webkit-box;
+                            overflow: hidden;
+                            span{
+                                background: rgb(255,94,94);
+                                color: #fff;
+                                border-radius: 20px;
+                                margin-right: 11px;
+                                display: block;
+                                position: relative;
+                                max-width: 240px;
+                                padding: 6px 18px;
+                            }
+                        }
+                        .open-coupon{
+                            color: rgb(255,94,94);
+                            font-size: 13px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-left: 10px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .promo-sell{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    padding: 12px 0px;
+                    .rightLabel{
+                        width: 15%;
+                        color: rgb(100,100,100);
+                        font-size: 14px;
+                        letter-spacing: 7px;
+                        line-height: 20px;
+                    }
+                    .promo-info{
+                        width: 85%;
+                        display: inline-block;
+                        p{
+                            width: 100%;
+                            margin-bottom: 7px;
+                            color: rgb(53,53,53);
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            i{
+                                margin-right: 10px;
+                                color: rgb(255,94,94);
+                                padding: 4px 12px;
+                                border: 1px solid rgb(255,94,94);
+                                background: white;
+                                font-size: 12px;
+                                border-radius: 4px;
+                            }
+                            span{
+                                display: inline-block;
+                                width: 75%;
+                                font-size: 14px;
+                                color: rgb(30,30,30);
+                            }
+                        }
+                    }
+                }
+            }
+            .addressMain{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                padding: 20px 20px;
+                border-bottom: 1px solid rgb(224,224,224);
+                .rightLabel{
+                    width: 15%;
+                    color: rgb(100,100,100);
+                    font-size: 14px;
+                    letter-spacing: 7px;
+                    line-height: 20px;
+                }
+                .address{
+                    width: 80%;
+                    padding-left: 30px;
+                    margin-top: 0;
+                    color: #000;
+                    position: relative;
+                    p{
+                        line-height: 18px;
+                        font-size: 12px;
+                        cursor: pointer;
+                        span{
+                            display: inline-block;
+                            font-size: 14px;
+                            position: relative;
+                            top: 1px;
+                        }
+                        img{
+                            position: absolute;
+                            width: 14px;
+                            left: 10px;
+                            top: 2px;
+                        }
+                    }
+                    .dh{
+                        font-size: 12px;
+                        .expressprefix{
+                            color: #FF4D4D;
+                        }
+                    }                                                                                           
+                }
+                .change{
+                    width: 6%;
+                    color: #e8380d;
+                    cursor: pointer;
+                    font-size: 13px;
+                    margin-right: 8px;
+                }
+            }
+            .productOptions{
+                width: 100%;
+                padding: 20px 20px 20px 20px;
+                border-bottom: 1px solid rgb(224,224,224);
+                .phone_net{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    .rightLabel2{
+                        width: 15%;
+                        color: rgb(100,100,100);
+                        font-size: 14px;
+                        line-height: 20px;
+                        margin-top: 10px;
+                        img{
+                            width: 20%;
+                        }
+                    
+                    }
+                    .clearfix_jj{
+                        width: 85%;
+                        display: flex;
+                        justify-content: flex-start;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        li{
+                            box-sizing: border-box;
+                            margin-top: 2px;
+                            padding: 8px 0px;
+                            width: 31%;
+                            margin-right: 10px;
+                            border: 1px solid rgb(224,224,224);
+                            color: rgb(100,100,100);
+                            text-align: center;
+                            font-size: 14px;
+                            line-height: 21px;
+                            cursor: pointer;
+                            margin-bottom: 10px;
+                            border-radius: 7px;
+                        }
+                        .cur{
+                            border: 1px rgb(255,94,94) solid;
+                            color: rgb(255,94,94);
+                        }
+                        .noShock{
+                            color: rgb(165,165,165)!important;
+                            text-decoration: line-through;
+                        }
+                    
+                    }
+                    #selectPackage{
+                        width: 85%;
+                        display: flex;
+                        justify-content: flex-start;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        li{
+                            box-sizing: border-box;
+                            height: 70px;
+                            width: 31%;
+                            margin-top: 2px;
+                            margin-right: 10px;
+                            border: 1px rgb(255,94,94) solid;
+                            color: rgb(255,94,94);
+                            font-size: 14px;
+                            cursor: pointer;
+                            margin-bottom: 10px;
+                            border-radius: 7px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            p{  
+                                font-size: 11px;
+                                color: rgb(102,102,102)!important;
+                                width: 36%;
+                                line-height: 20px;
+
+                            }
+                            
+                        }
+                    }                                                                                        
+                }
+                #selectBao{
+                    li{
+                        width: 47.7%;
+                        height: 70px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 0 25px;
+                        p{
+                            color: rgb(100,100,100)!important;
+                            font-size: 11px;
+                        }
+                    }
+                }
+                .count{
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    .rightLabel{
+                        width: 15%;
+                        color: rgb(100,100,100);
+                        font-size: 14px;
+                        letter-spacing: 7px;
+                        line-height: 20px;
+                    }
+                    .num{
+                        width: 35%;
+                        height: 50px;
+                        border: 1px solid rgb(230,230,230);
+                        border-radius: 0.2rem;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        div{
+                            width: 33.33%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: rgb(30,30,30);
+                            font-size: 16px;
+                            cursor: pointer;
+                            img{
+                                width: 30%;
+                            }
+                        }
+                    }
+                }
+            }
+            .btnGroup{
+                margin-top: 40px;
+                width: 100%;
+                .buy-btn-main>*{
+                    display: inline-block;
+                    height: 50px;
+                    width: 48.5%;
+                    color: #fff;
+                    font-size: 15px;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                }
+                .buy-btn-main{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    a{
+                        color: #fff;
+                        font-size: 15px;
+                    }
+                    .addShopCar{
+                        background: rgb(255,148,79);
+                    }
+                    .buy-now{
+                        background: rgb(255,94,94)
+                    }
+                }
+                
+            }
+        }
+
+    }
+    
+}
+
+
+
+// 页面尾部
+@import 'model/footer.scss';

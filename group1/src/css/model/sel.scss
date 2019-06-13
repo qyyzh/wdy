@@ -1,0 +1,180 @@
+// 下拉菜单
+#sel{
+    height: 700px;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+    .fr{
+        text-align: center;
+        width: 33px;
+        color: #fff;
+        font-size: 22px;
+        line-height: 220px;
+        transition: top 1s;
+        height: 240px;        
+        position: absolute;
+        z-index: 0;
+    }
+    #a-ago{        
+        top:-174px;
+        left: 40px;               
+    }
+    #a-next{        
+        top: -174px;
+        right: 40px;
+    }
+    .sel{      
+        height: 240px;
+        width: 100%;
+        background: rgba(15, 15, 15, 0.2);
+        position: absolute;
+        left: 0px;
+        top: -174px;
+        transition: top 1s;
+        overflow: hidden;
+        .sel-ul{
+            margin: 0 50px;
+            height: 188px;
+            width: 1000%;
+            margin-top:30px;
+            overflow: hidden;
+            li{
+                height: 165px;
+                width: 196px;
+                text-align: center;
+                float: left;
+                a{
+                    font-size: 13px;
+                    font-weight: 300;
+                    color: #fff;
+                    letter-spacing: 1px;
+                }
+                    img{
+                        height: 120px;
+                        display: inline-block;
+                    }
+                    span{
+                        display: block;
+                        margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+#log-left{
+    border-top: 15px solid rgba(15, 15, 15, 0);
+    z-index: 0;
+    position: absolute;
+    right: 110px;
+    top: 66px;
+    .log-left{
+        display: flex;
+        opacity: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;     
+        height: 530px;
+        width: 250px;
+        padding: 20px 10px;
+        background: #282828;
+        #log-a{
+            display: inline-block;
+            margin-top: 25px;
+            width: 48%;
+            height: 35px;
+            #log-btn{
+                width: 100%;
+                height: 100%;               
+                background:rgb(243,92,73);
+                border: none;
+                border-radius: 20px;
+                color: #fff;
+                font-size: 14px;
+                line-height: 35px;
+                text-align: center;
+            }
+        }
+        #log-p{
+            font-size: 14px;
+            margin: 10px 0;
+            color: rgb(148,148,148)!important;
+            a{
+                color: red;
+            }
+        }
+        #log-ul{
+            height: 420px;
+            width: 100%;          
+            li{
+                display: flex;
+                align-items: center;
+                padding-left: 10px;
+                width: 100%;
+                height: 69px;
+                font-size: 14px;
+                color: #ccc;
+                border-top: 1px solid rgb(148,148,148);
+                a{
+                    margin-left: 10px;
+                    font-size: 14px;
+                    color: #fff;
+                }
+            }
+            li:nth-child(1){
+                border-top: none;
+            }
+        }
+            
+    }
+}
+#log-right{
+    border-top: 15px solid rgba(15, 15, 15, 0);
+    position: absolute;
+    right: 60px;
+    top: 65px;
+    z-index: 0;
+    .log-right{
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;     
+        height: 140px;
+        width: 290px;
+        background: #282828;
+        span{
+            font-size: 40px;
+            color: rgb(148,148,148); 
+        }
+        p{
+            font-size: 14px;
+            color: rgb(148,148,148);
+            margin-top: 10px;
+        }
+    }
+}
+
+/*向上*/
+.border_up{
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #282828;
+    position: absolute;  
+}
+
+#left_border_up{
+    right: 125px;
+    top: 61px;
+    opacity: 0;
+}
+#right_border_up{
+    right:75px;
+    top: 61px;
+    opacity: 0;
+}
