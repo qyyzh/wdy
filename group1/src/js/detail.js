@@ -22,7 +22,7 @@ require(['./config'], () => {
               }
               
             } )
-        }
+        } 
         sum(){          
           let dz = Number(location.search.split('=')[1])
           console.log(dz)

@@ -18,41 +18,51 @@
 <div id="sidebar"></div>
 <!-- 用来加载主体内容的容器 -->
 <div id="index-html">
-    <div class="nav">
+    
+    <div class="nav" id="w10">
+        
+    </div>
+    <script type="text/html" id="w100">
+        {{each pro pho}}
         <a href="/index">首页 &nbsp;/&nbsp;
         </a>
         <a href="/detail">手机 &nbsp;/&nbsp;
         </a>
-        <a href="/product">红魔3</a>
-    </div>
+        <a href="/product">{{pho.phone}}</a>
+        {{/each}}
+    </script>
     <div class="main_content">
 <!-- 用来加载主体内容左边放大镜 --> 
         <div class="main_left" id="zoom-left">
+            
+        </div>
+        <script type="text/html" id="w110">
+            {{each pro img}}
             <div class="product-img-big">
-                <img class="zoom-img" src="../images/1.jpg" data-zoom-image="../images/1.jpg" alt="">
+                <img class="zoom-img" src="{{img.img1}}" data-zoom-image="{{img.img1}}" alt="">
             </div>
             <div class="product-img-min">
                 <div class="back"><a href="javascript:;"></a></div>
                 <div class="nav-img" id="product-img">
                     <ul id='img_thumb'>
                         <li class="selected">
-                            <a href="javascript:;" data-image="../images/1.jpg" data-zoom-image="../images/1.jpg">
-                                <img class="s" src="../images/1.jpg" alt=""> 
+                            <a href="javascript:;" data-image="{{img.img1}}" data-zoom-image="{{img.img1}}">
+                                <img class="s" src="{{img.img1}}" alt=""> 
                             </a>
                         </li>
                         <li>
-                                <a href="javascript:;" data-image="../images/2.jpg" data-zoom-image="../images/2.jpg">
-                                    <img class="s" src="../images/2.jpg" alt=""> 
+                                <a href="javascript:;" data-image="{{img.img2}}" data-zoom-image="{{img.img2}}">
+                                    <img class="s" src="{{img.img2}}" alt=""> 
                                 </a>
                         </li>
                         <li>
-                                <a href="javascript:;" data-image="../images/3.jpg" data-zoom-image="../images/3.jpg">
-                                    <img class="s" src="../images/3.jpg" alt=""> 
+                                <a href="javascript:;" data-image="{{img.img3}}" data-zoom-image="{{img.img3}}">
+                                    <img class="s" src="{{img.img3}}" alt=""> 
                                 </a>
                         </li>
                         <li>
-                                <a href="javascript:;" data-image="../images/4.jpg" data-zoom-image="../images/4.jpg">
-                                    <img class="s" src="../images/4.jpg" alt=""> 
+                                <a href="javascript:;" data-image="{{img.img4}}" data-zoom-image="{{img.img4}}">
+                                    <img class="s" src="{{img.img4}}" alt=""> 
                                 </a>
                         </li>
                     </ul>
@@ -63,11 +73,18 @@
                 <span class="glyphicon glyphicon-repeat">分享</span>
                 <span class="glyphicon glyphicon-star-empty">收藏</span>
             </div>
-        </div>
+            {{/each}}
+        </script>
 <!-- 用来加载主体内容右边详情 --> 
-        <div class="main_right">
+        <div class="main_right" id="w12">
+                        
+        </div>
+
+        <script type="text/html" id="w120">
+            {{each pro word}}
             <p class="main_right_p">
-                <span>红魔3 玄铁黑 8GB+128GB </span>
+                <!-- <span>红魔3 玄铁黑 8GB+128GB </span> -->
+                <span>{{word.name}}</span>
             </p>
             <p class="sellPoint">
                 <span style="color: rgb(255, 77, 77); font-size: 16px; font-weight: 800;">【仅限6.11日领券+下单立减】6+128G到手价：2699、8+128G到手价：2899、12+256G到手价：3699</span><br>
@@ -75,9 +92,7 @@
             <div class="productActivity">
                 <div class="price"><p class="rightLabel">价　格</p> 
                     <div class="PriceContent">
-                        <span style="font-size: 32px; color: rgb(255, 94, 94); line-height: 28px;">
-                            <i class="priceIcon">¥</i>3499.00
-                        </span>
+                        <span style="font-size: 32px; color: rgb(255, 94, 94); line-height: 28px;"><i class="priceIcon">¥</i>{{word.prices}}</span>
                     </div>
                 </div> 
 
@@ -181,15 +196,18 @@
 
             <div class="btnGroup">
                 <div class="buy-btn-main">
-                    <a class="addShopCar" href="http://localhost:1234/html/shop.html">加入购物车</a>
+                    <a class="addShopCar" >加入购物车</a>
                     <form id="bottom-buy-btn" method="POST" action="/order/check" class="buy-now" stock="1">
                         <input type="hidden" name="buy_from" value="1">
                         <input id="params" type="hidden" name="item_param">
-                        <a class="button active_button">立即购买</a>
+                        <a href="http://localhost:1234/html/shop.html?id={{word.id}}" class="button active_button">立即购买</a>
                     </form>
                 </div>
-            </div>            
-        </div>
+            </div>
+            {{/each}} 
+            
+        </script>
+
     </div>
 </div>
 <!-- 用来加载尾部的容器 -->

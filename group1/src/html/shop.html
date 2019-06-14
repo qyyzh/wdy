@@ -30,40 +30,45 @@
                     <th width="6%">操作</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td><img src="//oss.static.nubia.cn/active/5cc5098616ecf44.png?imageView2/2/w/100/h/100/format/png"></td>
-                    <td class="productname">
-                        <a target="_blank" productid="1176" href="/product/s/1176" class="pdt-title">红魔3( 8GB+128GB 玄铁黑)</a>
-                        <ul style="margin-top: 5px;">
-                            <li>
-                                <span class="bg-gift">赠品</span><a href="/product/s/1173" productid="1176" target="_blank">红魔3电竞向量保护套(  黑色)</a>
-                            </li>
-                        </ul>
-                    </td>
-                    <td> ￥3499</td>
-                    <td><div class="btn-cnts"><span class="table-cut">-</span> <input type="text" maxlength="2" readonly="readonly" class="num cart-cnt" value="1"> <span class="table-add">+</span></div></td>
-                    <td class="sum" style="line-height: 1.8;">￥3499.00</td>
-                    <td><a title="删除" class="cart-close close">×</a></td>
-                </tr>
+            <tbody class="tbody">
+
             </tbody>
+            <script type="text/html" id="tbo">
+                {{each pro good}}
+                    <tr>
+                        <td><img src="//oss.static.nubia.cn/active/5cc5098616ecf44.png?imageView2/2/w/100/h/100/format/png"></td>
+                        <td class="productname">
+                            <a target="_blank" productid="1176" href="/product/s/1176" class="pdt-title">{{good.title}}</a>
+                            <ul style="margin-top: 5px;">
+                                <li>
+                                    <span class="bg-gift">赠品</span><a href="/product/s/1173" productid="1176" target="_blank">红魔3电竞向量保护套(  黑色)</a>
+                                </li>
+                            </ul>
+                        </td>
+                        <td>￥{{good.price}}</td>
+                        <td><div class="btn-cnts"><span class="table-cut">-</span> <input type="text" maxlength="2" readonly="readonly" class="num cart-cnt" value="{{good.num}}"> <span class="table-add">+</span></div></td>
+                        <td class="sum" style="line-height: 1.8;">￥{{good.price*good.num}}</td>
+                        <td><a title="删除" class="cart-close close">×</a></td>
+                    </tr>
+                {{/each}}
+            </script>
             <tfoot>
                 <tr>
                     <td colspan="2" style="height: 90px;"></td>
                     <td colspan="2" style="text-align: right; line-height: 26px;"><p>合计(不含运费):</p></td>
-                    <td colspan="2" class="sum" style="text-align: left; line-height:  26px;"><p style="color: red;">￥3499</p></td>
+                    <td colspan="2" class="sums" style="text-align: left; line-height:  26px;"><p class="sums" style="color: red;">￥3499</p></td>
                 </tr>
             </tfoot>
         </table>
 
         <div class="btn-cart-groups">
             <div class="inner">
-                <a href="/shop" target="_blank" class="pay-continue">继续购物</a>
+                <a href="http://localhost:1234/" target="_blank" class="pay-continue">继续购物</a>
                 <a class="go-pay">立即结算</a>
             </div>
             
         </div>
-
+    </div>
 </div>
 <!-- 用来加载尾部的容器 -->
 <footer id="footer"></footer>

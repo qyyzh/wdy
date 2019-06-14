@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录注册</title>
+    <link rel="stylesheet" href="/css/reg.css">
+</head>
+<body>
+<div class="reg">
+    <img style="height:55px; width: 156px;" src="/images/tiMg.gif">
+    <form id="reg-form">
+        <div id="vc-DengLu">
+            <input type="text" id="mobile" name="mobile" placeholder="请输入手机号码" datatype="m" errormsg="手机号码格式错误" ajaxurl="/reg/checkmobile.action">
+            <input type="password" id="passwordMobile" onmousedown="this.removeAttribute('readonly');" onfocus="this.removeAttribute('readonly');" placeholder="密码为6-16个字符（数字、字母、符号至少包含两种）" datatype="s6-16" errormsg="密码为6-16个（数字、字母、符号至少包含</br>两种）" nullmsg="请填写信息！" class="Validform_error">
+            <span class="Validform_checktip Validform_wrong" id="phone_error">请填写信息！</span>
+            <span class="Validform_checktip Validform_wrong" id="password_error">请填写信息！</span>
+            <label id="inp">
+            <input id="inp2" type="text" id="mobileValidateCode" name="mobileValidateCode" placeholder="请输入手机收到的验证码" datatype="*">
+            <input id="inp3" type="button" value="获取验证码" class="btn-code" id="btn-code-mobile">
+            </label>   
+        </div>
+        <input type="button" style="margin-top:10px" id="reg_btn_id" value="提    交" class="btn-reg">
+        <div class="register-now">
+                <span style="padding: 0 7px;color:rgb(102, 102, 102);">已有账号，</span>
+                <a style="color: #e8380d;" href="http://localhost:1234/html/login.html">直接登录</a>
+        </div>
+    </form>
+</div>
+
+</body>
+<script src="/libs/require/require.min.js" data-main="/js/reg"></script>  
+</html>

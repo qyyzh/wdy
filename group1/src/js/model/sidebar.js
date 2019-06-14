@@ -6,7 +6,7 @@ define(['jquery'], () => {
         this.load().then(() => {
           // 操作sel里面的DOM
         this.menu()
-        
+        this.sl()
         })
         }
         load () {
@@ -29,7 +29,6 @@ define(['jquery'], () => {
                 }
             )
             $(window).scroll( function() {
-                console.log($(window).scrollTop())
                 if($(window).scrollTop()>800){
                     $('.nb-et-top a').css({'display':'block'})
                 }else{
@@ -37,11 +36,22 @@ define(['jquery'], () => {
                 }
             } )
             $('.nb-et-top a').click(function () { 
-                // $(window).animate({ 
-                //     scrollTop : 0
-                // }, 1000 )
-                $(window).scrollTop(0)
+                var start = document.documentElement.scrollTop || document.body.scrollTop;		
+                    var timer = setInterval(function(){
+                        var speed = Math.floor(-start/10);
+                        start += speed
+                        window.scrollTo(0,start)
+                        if(start == 0) clearInterval(timer);				
+                    },50) 
+            })          
+        }
+        sl(){
+            let goods = JSON.parse(localStorage.getItem('cart'))
+            let sums = 0
+            $(goods).each(function (index, element) {
+                sums ++
             })
+            $('.shopCarTip').html(sums)
         }
         
     }

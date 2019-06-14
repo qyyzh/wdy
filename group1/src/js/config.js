@@ -10,6 +10,7 @@ require.config({
     template: 'libs/art-template/template-web',
     cookie: 'libs/jquery-plugins/jquery.cookie',
     zoom: 'libs/jquery-plugins/jquery.elevatezoom',
+    fly: 'libs/jquery-plugins/jquery.fly'
   },
   // 垫片，加载一些不满足AMD规范但是又依赖于别的模块
   // cookie插件不满足AMD并且依赖于jquery
@@ -18,6 +19,9 @@ require.config({
       deps: ['jquery']
     },
     zoom : {
+      deps: ['jquery']
+    },
+    fly: {
       deps: ['jquery']
     }
   }

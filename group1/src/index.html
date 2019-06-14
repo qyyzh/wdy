@@ -22,7 +22,7 @@
     <script type="text/html" id="Carousel-ul-li">
       <ul id="Carousel-ul">
         {{each Carousel img}}
-        <li><a href="https://www.nubia.com/cn/" style="background-image: url('{{img.images}}')"></a></li>
+        <li><a href="http://localhost:1234/html/detail.html?id={{img.id}}" style="background-image: url('{{img.images}}')"></a></li>
         <!-- <li><a href="/html/detail.html?id={{img.id}}" style="background-image: url('{{img.images}}')"></a></li> -->
         {{/each}}
       </ul>
@@ -35,7 +35,7 @@
     <script type="text/html" id="Featured-ul-li">
       <ul id="Featured-ul">
           {{each Featured img}}
-          <li><a href="https://www.nubia.com/cn/" style="background-image: url('{{img.images}}')"></a></li>
+          <li><a href="http://localhost:1234/html/detail.html?id={{img.id+3}}" style="background-image: url('{{img.images}}')"></a></li>
           <!-- <li><a href="/html/detail.html?id={{img.id}}" style="background-image: url('{{img.images}}')"></a></li> -->
           {{/each}}
         </ul>

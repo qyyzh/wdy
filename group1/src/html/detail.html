@@ -25,9 +25,9 @@
             {{each tit word}}
             <a class="fl" href="http://localhost:1234/html/detail.html" class="sub-logo-z9max1 fl active">{{word.tit1}}</a>
             <a class="f2" href="http://localhost:1234/html/detail.html" class="sub-logo-z9max1 fl a_title">{{word.tit2}}</a>
-            {{/each}}             
             <a target="_blank" href="https://www.nubia.com/active/8934837741ec16c.html" class="btn-buy">附近的店&gt;&gt;</a>
-            <a target="_blank" href="http://localhost:1234/html/product.html" class="btn-buy">立即购买</a>
+            <a target="_blank" href="http://localhost:1234/html/product.html?id={{word.id}}" class="btn-buy">立即购买</a>
+            {{/each}}                    
             <ul class="sub-menu" id="sub-menu">
                 <li class="active"><a class="type=summary" href="?type=summary">概述</a></li>
                 <li><a class="type=params" href="?type=params">技术规格</a></li>
