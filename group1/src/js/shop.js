@@ -5,7 +5,8 @@ require(['./config'], () => {
         class Index {
             constructor () {
                 this.gwc()
-                this.del() 
+                this.del()
+                this.go_pay() 
             }                       
             gwc(){                                              
                 let goods = JSON.parse(localStorage.getItem('cart'))                  
@@ -81,14 +82,21 @@ require(['./config'], () => {
                     this.cal()
                 }
             }
-
-
             cal(){
                 let sums = 0
                 $('.sum').each(function (index, element) {
                     sums += Number($(element).html().slice(1))
                 })
                 $('.sums').html('¥'+sums)
+            }
+            go_pay(){
+                console.log(2)
+                $('.go-pay').on('click',()=>{
+                    console.log(2)
+                    if(confirm("请先登录")){
+                        window.location.href = "http://localhost:1234/html/login.html"
+                    } 
+                })
             }
         }
         new Index() 

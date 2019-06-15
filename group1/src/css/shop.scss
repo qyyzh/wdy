@@ -8,11 +8,11 @@
 #index-html{
     width: 100%;
     position: relative;
-    min-height: 750px;
+    min-height: 650px;
     overflow: hidden;
     .cart-con{
         width: 1170px;
-        height: 360px;
+        min-height: 360px;
         margin: 50px auto;
         .cart-h1{
             font-size: 14px;
@@ -157,6 +157,7 @@
                     border: 1px solid #e8380d;
                 }
                 .go-pay{
+                    cursor: pointer;
                     display: block;
                     padding: 10px;
                     color: #fff;

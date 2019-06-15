@@ -120,28 +120,24 @@ require(["./config"], () => {
                         // localStorage.setItem('cart', str)
                         localStorage.setItem('cart', JSON.stringify([this.detail]))
                     }
+                    console.log($(".addShopCar").offset().left+150)
+                    console.log($(".addShopCar").offset())
+                    console.log($(".addShopCar").offset().top-$(window).scrollTop())
                     // 抛物线
-                    $('<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1560509085741&di=b17d463f88543fd03fe104072b258554&imgtype=0&src=http%3A%2F%2Fpic1.16pic.com%2F00%2F52%2F67%2F16pic_5267544_b.jpg" style="width:20px;height:20px;border-radius: 50%;">')
+                    $('<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1560577210449&di=76533a0fa88487401b8cf33e9865ec17&imgtype=0&src=http%3A%2F%2Fku.90sjimg.com%2Felement_origin_min_pic%2F16%2F11%2F25%2Fa90382be7e9f9902e290afd35362e152.jpg" style="width:20px;height:20px;border-radius: 50%;">')
                     .fly({
-                        start: $(".addShopCar").offset(),
-                        end: $("#gwc").offset(),
+                        start : {left:$(".addShopCar").offset().left +150,top:$(".addShopCar").offset().top-$(window).scrollTop()},
+                        end : {left:$(".side").position().left + 20,top:$(".side").position().top +20},
                         // autoPlay: true, //是否直接运动,默认true
-                        // speed: 1.1, //越大越快，默认1.2
+                        speed: 1.1, //越大越快，默认1.2
                         // vertex_Rtop：100, //运动轨迹最高点top值，默认20
-                        // onEnd: function(){
-                        // console.log(this)
+                        onEnd: function(){
+                            
                         // this.destroy()
-                        // let num = Number($("#cart-num").html())
-                        // num += _this.detail.num
-                        // $("#cart-num").html(num)
-                        // console.log(num)
-                        // } //结束回调
+                        } //结束回调
                     })
-
                     this.sl()
-
-                })
-                
+                })          
             }
             sl(){
                 let goods = JSON.parse(localStorage.getItem('cart'))
